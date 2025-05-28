@@ -1,4 +1,4 @@
-package jp.te4a.spring.boot.myapp6.mybootapp6;
+package jp.te4a.spring.boot.myapp8.mybootapp8;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
@@ -14,7 +14,7 @@ public class BookController {
     @Autowired
     BookService bookService;
 
-    @RequestMapping("/")
+    @RequestMapping("/books")
      public String index(Model model){
         model.addAttribute("msg","this is setting message");
         return "index";
