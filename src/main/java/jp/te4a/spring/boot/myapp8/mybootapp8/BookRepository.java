@@ -28,6 +28,10 @@ public class BookRepository {
         return bookMap.put(bookBean.getId(),bookBean);
     }
 
+    public void delete(Integer bookId){
+        bookMap.remove(bookId);
+    }
+
     public List<BookBean> findAll(){
         return new ArrayList<>(bookMap.values());
     }
