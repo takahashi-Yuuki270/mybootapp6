@@ -1,4 +1,4 @@
-package jp.te4a.spring.boot.myapp11.mybootapp11;
+package jp.te4a.spring.boot.myapp12.mybootapp12;
 
 import jakarta.annotation.Generated;
 import jakarta.persistence.Column;
