@@ -15,9 +15,14 @@ public class WritterValidator implements ConstraintValidator<Writter, String> {
     @Override
     public boolean isValid(String value, ConstraintValidatorContext context) {
         if (value == null) {
-            return true; 
+            return true;
         }
-        return value.equals(ok);
+        if (!value.equals(ok)) {
+            context.disableDefaultConstraintViolation();
+            context.buildConstraintViolationWithTemplate("入力された値: '" + value + "' は無効です。")
+                   .addConstraintViolation();
+            return false;
+        }
+        return true;
     }
 }
-

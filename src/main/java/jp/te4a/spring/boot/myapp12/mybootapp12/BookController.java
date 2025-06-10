@@ -10,6 +10,9 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+
+import jakarta.validation.Valid;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -71,12 +74,6 @@ public class BookController {
     }
 String goToTop() {
  return "redirect:/books";
- }
- @PostMapping("submit")
- public String postMethodName(@RequestBody String entity) {
-     //TODO: process POST request
-     
-     return entity;
  }
  
 }

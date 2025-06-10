@@ -5,6 +5,7 @@ import jakarta.validation.constraints.Size;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+
 @Data
 @NoArgsConstructor
 public class BookForm {
@@ -14,8 +15,8 @@ private Integer id ;
   @TestValid(param="abc")
   private String title;
   @Size(min = 3, max = 20)
+  @Writter(ok = "東北タロウ", message = "入力された値: '{validatedValue}' は無効です。")
   private String writter;
-  @Writter(ok = "東北タロウ", message = "Input 入力値")
   private String publisher;
   @Min(0)
   private Integer price;
